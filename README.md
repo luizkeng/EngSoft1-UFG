@@ -9,12 +9,17 @@ Escolhemos usar o método Scrum para desenvolver o projeto da calculadora virtua
   - [Slides](/Slides/Processo_de_Desenvolvimento.pdf)
   - [Vídeo](https://youtu.be/-7sWQTXkVSw)
   - [Projeto no Trello](https://trello.com/b/obIYztlF/modelo-de-projeto-scrum)
-- Etapas
+## Etapas
   - Escolha do método: Método Scrum
   - Escolha do projeto: Desenvolvimento de uma calculadora virtual
+  
 - Proposta
 
-  - Realizar uma calculadora virtual para crianças, ela deverá atender um público alvo.
+  - Realizar uma calculadora virtual para crianças, ela deverá atender um público alvo. 
+  - Devemos responder as perguntas 
+      - Quem irá fazer: qual o perfil de usuário(papel) que ira utilizara função requerida?
+      - O quê será feito: qual a função requerida para o sistema?
+      - Porque será feio: qualo valor agregado ao negócio com a execução desta função?
   
 - Disponibilidade Comercial
 
@@ -33,4 +38,7 @@ Escolhemos usar o método Scrum para desenvolver o projeto da calculadora virtua
   - Conhecer a demanda 
   - Análise dos preços
   - Apresentação do negócio
+
+- Execução
+  O Product Owner com o time de desenvolvimento usando o Scrum serão responsáeis pelo planejamento da sprint. Quando a sprin for iniciada a equipe vai trabalhar em conjunto definindo as entregas, realizando reuniões diárias para a verificação do projeto.
  
