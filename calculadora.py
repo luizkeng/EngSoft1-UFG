@@ -18,5 +18,5 @@ class Calculadora:
         return a / b
 
     def potencia(self, b, e):
-    '''Retorna b elevado a potencia e'''
-    return pow(b, e)
+        '''Retorna b elevado a potencia e'''
+        return pow(b, e)
