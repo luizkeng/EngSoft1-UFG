@@ -16,3 +16,7 @@ class Calculadora:
     def divide(self, a, b):
 		'''Retorna a divisão de a por b'''
         return a / b
+
+    def potencia(self, b, e):
+    '''Retorna b elevado a potencia e'''
+    return pow(b, e)
