@@ -8,8 +8,6 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QWidget
 
-
-
 # GUI da calculadora
 class Calculadora_Ui(QMainWindow):
     def __init__(self):
