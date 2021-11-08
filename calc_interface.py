@@ -7,6 +7,18 @@ from PyQt5.QtWidgets import QVBoxLayout
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QWidget
+from functools import partial
+
+# MSG de erro 
+ERROR_MSG = 'Expressão Inválida'
+
+def avaliar_expressao(expressao):
+    try:
+        result = str(eval(expressao, {}, {}))
+    except Exception:
+        result = ERROR_MSG
+
+    return result
 
 # GUI da calculadora
 class Calculadora_Ui(QMainWindow):
@@ -73,13 +85,44 @@ class Calculadora_Ui(QMainWindow):
     def limparDisplay(self):
         self.setDisplayText('')
 
+class Calculadora_control:
+    def __init__(self, model, view):
+        self._view = view
+        self._avaliar = model
+        self._connectSignals()
+
+    def _calculateResult(self):
+        result = self._avaliar(expressao=self._view.displayText())
+        self._view.setDisplayText(result)
+
+    def _ExpressaoMat(self, sub_exp):
+        if self._view.displayText() == ERROR_MSG:
+            self._view.limparDisplay()
+            
+        expressao = self._view.displayText() + sub_exp
+        self._view.setDisplayText(expressao)
+
+    def _connectSignals(self):
+        for btnText, btn in self._view.buttons.items():
+            if btnText not in {'=', 'C', 'x²'}:
+                btn.clicked.connect(partial(self._ExpressaoMat, btnText))
+            
+            elif btnText == 'x²':
+                
+                btn.clicked.connect(partial(self._ExpressaoMat, "**2"))
+
+        self._view.buttons['='].clicked.connect(self._calculateResult)  
+        self._view.display.returnPressed.connect(self._calculateResult)
+        self._view.buttons['C'].clicked.connect(self._view.limparDisplay)
+
 # Client code
 def main():
-    """Main function."""
     # Instanciando QApplication e carregando o GUI
     pycalc = QApplication(sys.argv)
     view = Calculadora_Ui()
     view.show()
+    model = avaliar_expressao
+    Calculadora_control(model=model, view=view)
     sys.exit(pycalc.exec_())
 
 if __name__ == '__main__':
