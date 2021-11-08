@@ -40,5 +40,5 @@ Escolhemos usar o método Scrum para desenvolver o projeto da calculadora virtua
   - Apresentação do negócio
 
 - Execução
-  O Product Owner com o time de desenvolvimento usando o Scrum serão responsáeis pelo planejamento da sprint. Quando a sprin for iniciada a equipe vai trabalhar em conjunto definindo as entregas, realizando reuniões diárias para a verificação do projeto.
+  Os desenvolvedores usarão o gerenciamento de projeots Scrum e serão responsáeis pelo planejamento da Sprint para atender as histórias feitas pelo Product Owner. Quando a Sprins for iniciada a equipe vai trabalhar em conjunto definindo as tarefas e entregas, realizando reuniões diárias para a verificação do projeto.
  
